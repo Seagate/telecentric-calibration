@@ -1,3 +1,7 @@
+% Filename: SimpleOrthographicCalibration.m
+% Description: calibration script using a number of checkerboard images
+% (simple version)
+
 %% Add path if needed
 % addpath('../src/');
 

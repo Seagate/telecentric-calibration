@@ -1,4 +1,14 @@
 function images = read_images(folder,extension)
+    % Descrition: convenience function to read a number of images from
+    % folder
+    % 
+    % Inputs:
+    %   @folder - containing image files
+    %   @extension - image file extension
+    %
+    % Output:
+    %   @images - images as cell array
+    %
     assert(startsWith(extension,'.'), "Must start with .");
     assert(ischar(extension), "Must be char array");
     img_files = dir(fullfile(folder,['*' extension]));

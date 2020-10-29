@@ -4,7 +4,15 @@
 % camera lens distortion", Pattern Recognit., 41 pp.607-615 (2008)
 
 function pts_distort = distort_v1(pts_pre, v_param, model, distort_plane)
-    % @param v_param = [u0, v0, k1, p1, p2, q1, q2]
+    % Inputs:
+    %   @pts_pre - coordinates of undistorted points, size Nx2
+    %   @v_param - distortion related parameters[u0, v0, k1, p1, p2, q1, q2]
+    %   @model - full distortion model or raidial + tangential only
+    %   @distort_plane - apply distortion on normal or sensor plane
+    %
+    % Outputs:
+    %   @pts_distort - coordinates of distorted points, size Nx2
+    %
     u0 = v_param(1);
     v0 = v_param(2);
     k1 = v_param(3);

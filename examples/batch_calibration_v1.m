@@ -1,9 +1,5 @@
 % Filename: batch_calibration_v1.m
-% Description: orthographic calibration script using a number of images
-% Refereces:
-% [1] Z. Chen, H. Liao and X. Zhang, "Telecentric stereo micro-vision
-% system: Calibration method and experiments", Opt. Laser. Eng. 57, pp
-% 82-89 (2014)
+% Description: orthographic calibration script using a number of checkerboard images
 
 %% Read files
 % Much better result if no degeneracy in calibration images

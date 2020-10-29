@@ -21,10 +21,19 @@ function [param_vec, target_struct, batch_img_pts, homographies] = estimate_para
     %       Extrinsics:
     %           [ra, rb, rc] - 3D rotation vector
     %           [tx, ty] - 2D translation vector
-    %   @w_coord: world coordinates of the checkerboard points; shape N x 2
+    %   @target_struct: geometry of the test target including
+    %       - rows: number of rows
+    %       - cols: number of columns
+    %       - sq_size: size of the checkerboard squares
+    %       - w_coord: world coordinates of the checkerboard points; shape N x 2
     %   @batch_img_pts: all detected points in images, shape N x 2 x
     %   img_num where N is the total number of calibration points in one image
     %   @homographies: cell array containing homographies
+    %
+    % [References]
+    %   [1] Z. Chen, H. Liao and X. Zhang, "Telecentric stereo micro-vision
+    %   system: Calibration method and experiments", Opt. Laser. Eng. 57, pp
+    %   82-89 (2014)
     %
     %% Prepare for homography
     % Get board geometry
